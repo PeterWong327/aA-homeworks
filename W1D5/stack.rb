@@ -1,5 +1,5 @@
 class Stack
-  attr_accessor :stack
+  attr_reader :stack
 
   def initialize
     @stack = []
@@ -7,6 +7,7 @@ class Stack
 
   def push(el)
     stack.push(el)
+    el
   end
 
   def pop
@@ -14,6 +15,6 @@ class Stack
   end
 
   def peek
-    puts stack[-1]
+    stack[-1]
   end
 end
