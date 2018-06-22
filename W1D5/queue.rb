@@ -1,18 +1,20 @@
 class Queue
-  attr_accessor :queue
+  attr_reader :queue
 
   def initialize
     @queue = []
   end
+
   def enqueue(el)
-    queue.unshift(el)
+    queue.push(el)
   end
 
   def dequeue
-    queue.pop
+    queue.shift
   end
 
   def peek
-    puts queue.first
+     queue.first
   end
+
 end
