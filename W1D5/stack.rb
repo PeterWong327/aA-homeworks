@@ -1,14 +1,16 @@
 class Stack
+  attr_accessor :stack
+
   def initialize
-    @stack = stack
+    @stack = []
   end
 
   def push(el)
-    self.push(el)
+    stack.push(el)
   end
 
   def pop
-    self.pop
+    stack.pop
   end
 
   def peek
