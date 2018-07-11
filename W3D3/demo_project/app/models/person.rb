@@ -1,7 +1,7 @@
 class Person < ActiveRecord::Base
-  validates :name, :house, presence: true, uniqueness: true
+  validates :name, uniqueness: true
 
-  belongs_to :house
+  belongs_to :house,
     primary_key: :id,
     foreign_key: :house_id,
     class_name: 'House' #string or symbol
